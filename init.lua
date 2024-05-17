@@ -17,26 +17,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-  {"catppuccin/nvim", name = "catppuccin", priority = 1000},
-  {
-    "nvim-telescope/telescope.nvim", branch = "0.1.x",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-  },
-}
-local opts = {}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
