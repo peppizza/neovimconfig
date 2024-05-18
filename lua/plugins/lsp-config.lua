@@ -28,6 +28,18 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.ccls.setup({
+				init_options = {
+					compilationDatabaseDirectory = "build",
+					index = {
+						threads = 0,
+					},
+					clang = {
+						excludeArgs = { "-frounding-math" },
+					},
+				},
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
