@@ -5,6 +5,16 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		ensure_installed = {
+			"lua_ls",
+			"tsserver",
+			"rust_analyzer",
+			"stylua",
+			"prettier",
+			"cmakelang",
+			"cmakelint",
+			"eslint_d",
+		},
 		config = true,
 	},
 	{
@@ -32,6 +42,9 @@ return {
 						excludeArgs = { "-frounding-math" },
 					},
 				},
+				capabilities = capabilities,
+			})
+			lspconfig.cmake.setup({
 				capabilities = capabilities,
 			})
 		end,
