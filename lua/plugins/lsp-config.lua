@@ -5,17 +5,15 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    ensure_installed = {
-      "lua_ls",
-      "tsserver",
-      "rust_analyzer",
-      "stylua",
-      "prettier",
-      "cmakelang",
-      "cmakelint",
-      "eslint_d",
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "tsserver",
+        "rust_analyzer",
+        "cmake",
+        "cmake",
+      },
     },
-    config = true,
   },
   {
     "neovim/nvim-lspconfig",
