@@ -48,9 +48,9 @@ return {
       })
     end,
     keys = {
-      { "K",  vim.lsp.buf.hover,      desc = "LSP hover" },
-      { "gd", vim.lsp.buf.definition, desc = "Jump to definition" },
-      { "gr", vim.lsp.buf.references, desc = "Search for references" },
+      { "K",          vim.lsp.buf.hover,      desc = "LSP hover" },
+      { "<leader>gd", vim.lsp.buf.definition, desc = "Jump to definition" },
+      { "<leader>gr", vim.lsp.buf.references, desc = "Search for references" },
       -- { "<leader>ca", vim.lsp.buf.code_action, mode = { "n", "v" }, desc = "LSP code actions" },
     },
   },
