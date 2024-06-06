@@ -4,7 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set noshowmode")
-vim.cmd("set scrolloff=20")
+vim.cmd("set scrolloff=999")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
 vim.g.mapleader = " "
